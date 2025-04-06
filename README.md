@@ -76,4 +76,4 @@ Christ University, Bangalore
 
 ## 📬 Contact
 
-For collaborations or feedback, email: `tejasbhandarkar764@gmail.com`
+For collaborations or feedback, email: `tejasbhandarkar12@gmail.com`
