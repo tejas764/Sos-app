@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Emergency_response3</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_sosactivity">SOSActivity</string>
+    <string name="emergency_nvending">Emergency\nVending</string>
+    <string name="ambulance_ntracking">Ambulance\nTracking</string>
+    <string name="sos">SOS</string>
+    <string name="vending_app">Vending app</string>
+    <string name="ambulance_track">Ambulance Track</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="vending_list">Vending list</string>
+    <string name="medicinename">medicinename</string>
+    <string name="_5_rs">5 Rs.</string>
+    <string name="items">Items</string>
+    <string name="view_all">View all</string>
+    <string name="emergencysos">EmergencySOS</string>
+    <string name="rights_logo">Rights logo</string>
+    <string name="kyr">KYR</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="view_alll">View All</string>
+    <string name="itemss">Items</string>
+    <string name="default_web_client_id">365655412710-ucp163qhsqpbrs6av0bj1t4harmqh4j9.apps.googleusercontent.com</string>
+
+</resources>

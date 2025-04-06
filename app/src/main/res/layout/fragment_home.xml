@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.HomeFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="-20dp"
+        android:layout_marginEnd="1.5dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.denzcoskun.imageslider.ImageSlider
+            android:id="@+id/image_slider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="1dp"
+            app:iss_auto_cycle="true"
+            app:iss_delay="1000"
+            app:iss_no_dots="true"
+            app:iss_period="1000"
+            app:iss_text_align="CENTER" />
+    </androidx.cardview.widget.CardView>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="411dp"
+        android:layout_height="497dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="411dp"
+            android:layout_height="497dp"
+            android:layout_marginTop="2dp"
+            android:columnCount="2"
+            android:rowCount="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardView">
+
+            <!-- Row 1 -->
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="170dp"
+                android:layout_height="136dp"
+                android:layout_marginStart="20dp"
+                android:contentDescription="@string/vending_app"
+                android:elevation="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/vendinglogo" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="170dp"
+                android:layout_height="136dp"
+                android:layout_marginStart="20dp"
+                android:contentDescription="@string/ambulance_track"
+                android:elevation="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ambtreck" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/emergency_nvending"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/ambulance_ntracking"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Row 2 -->
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="170dp"
+                android:layout_height="136dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:contentDescription="@string/emergencysos"
+                android:elevation="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/sos" />
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="170dp"
+                android:layout_height="136dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:contentDescription="@string/rights_logo"
+                android:elevation="10dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/rightslogo"
+                tools:ignore="ImageContrastCheck" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|top"
+
+                android:text="@string/sos"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|top"
+                android:text="@string/kyr"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </GridLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
