@@ -1,79 +1,52 @@
+# SOS — Android Emergency Assistance Prototype
 
-# 📛 SOS App
+An academic Android application exploring emergency-assistance screens, map integration, and an emergency-vending interface.
 
-A mobile emergency response application built to ensure safety by notifying people within a 50-meter range and providing real-time ambulance tracking. Developed as a submission for **Google Summer of Code 2025**.
+**Kotlin · Android Views · View Binding · Google Maps SDK**
 
----
+## Current scope
 
-## 🚨 Features
+| Area | Repository implementation |
+| --- | --- |
+| Navigation | Splash, main application, and bottom-navigation screens |
+| Account UI | Login and signup activities |
+| SOS map | Google Maps screen with a fixed sample marker |
+| Vending UI | Vending activities, product resources, and related fragments |
+| Firebase setup | Google Services plugin and configuration file; service dependencies need review |
 
-- 🧭 **SOS Alert**: Instantly notify nearby users in emergencies.
-- 📍 **Location Sharing**: Real-time user location for faster response.
-- 🚑 **Ambulance Tracking**: View live ambulance movement.
-- 🧃 **Emergency Vending Integration**: Access essential items like first aid and water during emergencies.
-- 🔒 **Secure & Lightweight**: Fast performance with strong privacy considerations.
+The current `SOSActivity` adds a fixed marker. Live ambulance tracking, nearby-user alert delivery, and hardware vending integration are not established by this implementation. Treat this as a prototype, not an operational emergency service.
 
----
+## Getting started
 
-## 🛠️ Tech Stack
-
-| Area              | Tech Used               |
-|-------------------|--------------------------|
-| Frontend          | Kotlin (Android Studio) |
-| Backend/Realtime  | Firebase Realtime DB    |
-| Authentication    | Firebase Auth           |
-| Maps & Location   | Google Maps API         |
-| Notifications     | Firebase Cloud Messaging (FCM) |
-| Vending Machine Integration | Custom API / Hardware Support |
-
----
-
-## 🚧 Project Structure
-
-```
-Emergency_response3/
-├── app/
-│   ├── src/
-│   │   ├── main/
-│   │   │   ├── java/
-│   │   │   └── res/
-├── .gitignore
-├── build.gradle
-├── README.md
+```bash
+git clone https://github.com/tejas764/Sos-app.git
 ```
 
----
+1. Open the repository root in Android Studio.
+2. Install Android SDK 35 and use the IDE's Gradle-compatible JDK.
+3. Sync Gradle. The app targets SDK 35 and supports Android API 24 or newer.
+4. Configure your own Google Maps project/key. The current manifest contains an inline Maps key; replace it with appropriate configuration and key restrictions for your application.
+5. Replace `app/google-services.json` with the configuration for your own Firebase project if retaining the Google Services plugin.
+6. Select an emulator or Android device and run the `app` configuration.
 
-## 🧪 How to Run
+The source's Java/Kotlin target is 11; this is not necessarily the JDK version required to run the Android Gradle plugin.
 
-1. Clone this repo:
-   ```bash
-   git clone https://github.com/tejas764/Sos-app.git
-   ```
+## Project structure
 
-2. Open the project in **Android Studio**.
+| Path | Purpose |
+| --- | --- |
+| [app/src/main/java/](app/src/main/java/) | Kotlin activities, fragments, and models |
+| [app/src/main/res/](app/src/main/res/) | Layouts, images, themes, and navigation resources |
+| [app/src/main/AndroidManifest.xml](app/src/main/AndroidManifest.xml) | Activities and Maps configuration |
+| [app/build.gradle.kts](app/build.gradle.kts) | SDK settings and app dependencies |
+| [gradle/libs.versions.toml](gradle/libs.versions.toml) | Dependency version catalog |
 
-3. Set up **Firebase** (Auth + Realtime DB + FCM + Maps API) using your own credentials.
+## Build and checks
 
-4. Build & run on an Android device or emulator.
+After Android Studio setup, run `gradlew.bat assembleDebug` on Windows or `bash gradlew assembleDebug` on macOS/Linux. Review the supplied example tests before relying on them as feature coverage.
 
----
+For manual verification, check navigation, map loading, account-screen behavior, and vending screens. Real alerting and tracking need backend implementation, permissions, and end-to-end testing.
 
-## 📄 Proposal
+## Author
 
-This app is proposed under **Google Summer of Code 2025** under the category of **Mobile Safety & Real-Time Systems**.  
-You can read the full proposal [here](./GSoC_2025_SOS_Proposal_Tejas_Bhandarkar.pdf).
-
----
-
-## 👨‍💻 Author
-
-**Tejas Bhandarkar**  
-Second-Year BSc CS & Math Student  
-Christ University, Bangalore
-
----
-
-## 📬 Contact
-
-For collaborations or feedback, email: `tejasbhandarkar12@gmail.com`
+[Tejas Bhandarkar](https://github.com/tejas764) · CHRIST University, Bengaluru
